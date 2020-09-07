@@ -31,6 +31,7 @@ namespace CoffeeShop.Controllers
 
       //  GET: api/Quotes
        [HttpGet]
+       [ResponseCache(Duration =60,Location =ResponseCacheLocation.None)]
         public IActionResult  Get(String sort, String sortByName)
         {
             IQueryable<Quote> quotes;

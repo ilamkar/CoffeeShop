@@ -132,9 +132,6 @@ C:\Codebase\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.J
 C:\Codebase\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
 C:\Codebase\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\Codebase\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
-C:\Codebase\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.csproj.CoreCompileInputs.cache
-C:\Codebase\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.MvcApplicationPartsAssemblyInfo.cs
-C:\Codebase\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.MvcApplicationPartsAssemblyInfo.cache
 C:\Codebase\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\Namotion.Reflection.dll
 C:\Codebase\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\NJsonSchema.dll
 C:\Codebase\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\NSwag.Annotations.dll
@@ -142,4 +139,7 @@ C:\Codebase\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\NSwag.AspNetCore.dll
 C:\Codebase\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\NSwag.Core.dll
 C:\Codebase\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\NSwag.Generation.dll
 C:\Codebase\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\NSwag.Generation.AspNetCore.dll
+C:\Codebase\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.csproj.CoreCompileInputs.cache
+C:\Codebase\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.MvcApplicationPartsAssemblyInfo.cs
+C:\Codebase\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.MvcApplicationPartsAssemblyInfo.cache
 C:\Codebase\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.csprojAssemblyReference.cache

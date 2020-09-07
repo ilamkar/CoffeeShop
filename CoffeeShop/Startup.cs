@@ -33,6 +33,8 @@ namespace CoffeeShop
             services.AddDbContext<QuotesDbContext>(option => option.UseSqlServer(@"Data Source=DESKTOP-EJHPO85\SQLEXPRESS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Initial Catalog=QuotesDb"));
 
             services.AddSwaggerDocument();
+
+            services.AddResponseCaching();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +46,9 @@ namespace CoffeeShop
             }
 
             app.UseHttpsRedirection();
+
+            //Caching
+            app.UseResponseCaching();
 
             app.UseRouting();
            
