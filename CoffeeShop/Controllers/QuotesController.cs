@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using CoffeeShop.Data;
@@ -30,7 +31,7 @@ namespace CoffeeShop.Controllers
 
       //  GET: api/Quotes
        [HttpGet]
-        public IActionResult  Get(String sort, String sorthByName)
+        public IActionResult  Get(String sort, String sortByName)
         {
             IQueryable<Quote> quotes;
             // var quote = await _quotesDbContext.Quotes.ToListAsync();
@@ -49,7 +50,7 @@ namespace CoffeeShop.Controllers
                         break;
                 }
             }
-            switch (sorthByName)
+            switch (sortByName)
             {
                 case "desc":
                     quotes = _quotesDbContext.Quotes.OrderByDescending(q => q.Author);
@@ -63,6 +64,15 @@ namespace CoffeeShop.Controllers
             }
 
             return Ok(quotes);
+        }
+        [HttpGet("[action]")]
+        public IActionResult PageQuote(int? pageNumber, int? pageSize)
+        {
+            var quotes = _quotesDbContext.Quotes;
+            var currentPageNumber = pageNumber ?? 1;
+            var currentPageSize = pageSize ?? 5;
+
+            return Ok(quotes.Skip((currentPageNumber - 1) * currentPageSize).Take(currentPageSize));
         }
 
         // GET: api/Quotes/5
@@ -91,11 +101,19 @@ namespace CoffeeShop.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Quote value)
         {
-            var current_timestamp = DateTime.Now;
-            value.CreatedAt = current_timestamp;
-            _quotesDbContext.Quotes.Add(value);
-            _quotesDbContext.SaveChanges();
-            return Ok(value);
+            try
+            {
+                var current_timestamp = DateTime.Now;
+                value.CreatedAt = current_timestamp;
+                _quotesDbContext.Quotes.Add(value);
+                _quotesDbContext.SaveChanges();
+                return Ok(value);
+            }
+            catch (Exception e)
+            {
+
+                return Ok(e.Message);
+            }
         }
 
         // PUT: api/Quotes/5
