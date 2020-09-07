@@ -75,6 +75,14 @@ namespace CoffeeShop.Controllers
             return Ok(quotes.Skip((currentPageNumber - 1) * currentPageSize).Take(currentPageSize));
         }
 
+        //Search Functionality
+        [HttpGet("[action]")]
+        public IActionResult SearchQuote(String type)
+        {
+           var quotes= _quotesDbContext.Quotes.Where(q => q.Type.StartsWith(type));
+            return Ok(quotes);
+        }
+
         // GET: api/Quotes/5
         [HttpGet("{id}", Name = "Get")]
         public async Task<ActionResult<Quote>> GetName(int id)
